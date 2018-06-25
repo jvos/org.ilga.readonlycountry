@@ -159,7 +159,15 @@ function readonlycountry_civicrm_navigationMenu(&$menu) {
  * @param CRM_Core_Form $form
  */
 function readonlycountry_civicrm_buildForm($formName, &$form) {
-    if ($formName == 'CRM_Contribute_Form_Contribution_Main' and $form->getVar('_id') != 13 and $form->getVar('_id') != 14) {              
+    if ($formName == 'CRM_Contribute_Form_Contribution_Main' 
+        and $form->getVar('_id') != 13 
+        and $form->getVar('_id') != 14 
+        and $form->getVar('_id') != 26 
+        and $form->getVar('_id') != 27 
+        and $form->getVar('_id') != 28 
+        and $form->getVar('_id') != 29 
+        and $form->getVar('_id') != 30 
+        and $form->getVar('_id') != 31) {              
         CRM_Core_Resources::singleton()->addScriptFile('org.ilga.readonlycountry', 'readonlycountry.js', 10, 'html-header');
     }
 }
